@@ -30,7 +30,7 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:"Hiragino Sans"
 .eyebrow{color:var(--accent);font-size:13px;letter-spacing:.15em}
 h1{font-size:30px;line-height:1.4;margin:12px 0 16px;font-weight:700}
 .lead{color:var(--muted);font-size:15px}
-.hero{width:100%;aspect-ratio:4/5;background:var(--panel);border:1px solid var(--line);margin:28px 0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;object-fit:cover}
+.hero{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/5;object-position:center 20%;background:var(--panel);border:1px solid var(--line);margin:28px 0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;object-fit:cover}
 .cta{display:block;text-align:center;background:var(--accent);color:#111;font-weight:700;text-decoration:none;padding:18px;border-radius:6px;font-size:17px}
 .note{text-align:center;color:var(--muted);font-size:12px;margin-top:8px}
 h2{font-size:20px;margin:48px 0 16px;border-left:3px solid var(--accent);padding-left:12px}
@@ -45,12 +45,11 @@ h2{font-size:20px;margin:48px 0 16px;border-left:3px solid var(--accent);padding
 </head>
 <body>
 <main class="wrap">
-  <div class="eyebrow">東京・恵比寿周辺｜完全予約制</div>
-  <h1>同じ施術を、<br>全員にはしません。</h1>
-  <p class="lead">身体の状態を評価してから、整体・関節調整・ストレッチ・運動を組み合わせて内容を決める、パーソナルセッションです。</p>
+  <div class="eyebrow">朝晩の寒暖差で、からだが重い方へ</div>
+  <h1>揉んでも、<br>すぐ戻る肩こり。</h1>
+  <p class="lead">原因は、筋肉だけではありません。寒暖差で自律神経が疲れているのかもしれません。<br>東京・恵比寿周辺（完全予約制）で、身体の状態を評価してから、整体・関節調整・ストレッチ・運動を組み合わせて整えます。</p>
 
-  <!-- 実写写真に差し替え：評価・施術の手元 -->
-  <div class="hero">（ここに評価・施術の実写写真）</div>
+  <img class="hero" src="hero.jpg" alt="整体師・パーソナルトレーナーの原口慶篤">
 
   <a class="cta js-line" href="https://s.lmes.jp/landing-qr/2006566038-Q3NvXDea?uLand=7VxMYJ">LINEで「60秒 身体のくせチェック」を受け取る</a>
   <p class="note">登録は無料。いつでもブロックできます。</p>

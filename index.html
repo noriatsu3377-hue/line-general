@@ -54,9 +54,9 @@ h2{font-size:20px;margin:44px 0 14px;border-left:3px solid var(--accent);padding
 <main class="wrap">
 <div class="eyebrow">朝晩の寒暖差で、からだが重い方へ</div>
 <h1>揉んでも、<br>すぐ戻る肩こり。</h1>
-<p class="lead">原因は、筋肉だけではありません。寒暖差で自律神経が疲れているのかもしれません。4つの質問で、あなたの「疲れ方のタイプ」をチェックしてみてください。</p>
+<p class="lead">原因は、筋肉だけではありません。寒暖差で自律神経が疲れているのかもしれません。「あるある」と思うものを4つだけチェックして、あなたの疲れ方のタイプを見てみてください。</p>
 <div class="gift"><span class="lbl">無料プレゼント</span><h2>寒暖差リセット 自宅ケアガイド(PDF)</h2><ul><li>あなたの「疲れ方のタイプ」(A〜D)の詳しい解説</li><li>1日3分の自宅ケア3つ(呼吸・胸・足元)</li><li>LINE登録者限定:初回の方に「評価レポート(写真つき)」をプレゼント</li></ul></div>
-<button class="btn" id="start" type="button">4つの質問で、疲れ方をチェックする(無料)</button>
+<button class="btn" id="start" type="button">あてはまるか、4つだけチェックする(無料)</button>
 <p class="note">所要1分・登録は無料。いつでもブロックできます。</p>
 <section id="quiz" hidden><div class="bar"><i id="pg"></i></div><div id="qbox"></div></section>
 <img class="hero" src="hero.jpg" alt="整体師・パーソナルトレーナーの原口慶篤">
@@ -69,8 +69,8 @@ h2{font-size:20px;margin:44px 0 14px;border-left:3px solid var(--accent);padding
 </main>
 <div class="fixed" id="fx"><button class="btn" type="button" onclick="startQuiz()">4つの質問でチェックする(無料)</button></div>
 <script>
-var QS=[{"q": "1日の中で、いちばん疲れを感じるのは?", "o": [["朝から重い", "A"], ["夕方にどっと来る", "B"], ["座りっぱなしのあと", "C"], ["運動のあと", "D"]]}, {"q": "いちばん気になるのは?", "o": [["首・肩", "A"], ["寝つき・眠りの質", "B"], ["腰まわり・脚", "C"], ["動きのキレ", "D"]]}, {"q": "眠りについて近いのは?", "o": [["寝ても疲れが残る", "A"], ["寝つきが悪い・途中で目が覚める", "B"], ["同じ姿勢で寝てしまう", "C"], ["特に気にならない", "D"]]}, {"q": "マッサージを受けたあとは?", "o": [["その場は楽、すぐ戻る", "A"], ["だるくなる", "B"], ["あまり変わらない", "C"], ["受けたことがない", "D"]]}];
-var RES={"A": ["タイプA:上半身に力が入りっぱなしタイプ", "首や肩の力が抜けにくく、休んでも重さが残りやすい傾向があります。寒暖差の季節は、さらに首をすくめて縮こまりがちです。", "続き(タイプAの詳しい解説)と、1日3分の自宅ケアガイドをLINEでお届けします。"], "B": ["タイプB:スイッチが切り替わりにくいタイプ", "活動と休息の切り替えがうまくいかず、夕方や夜に疲れが出やすい傾向があります。寒暖差で自律神経が働き続けると、さらに抜けにくくなります。", "続き(タイプBの詳しい解説)と、1日3分の自宅ケアガイドをLINEでお届けします。"], "C": ["タイプC:土台が片寄っているタイプ", "立ち方や座り方のくせで、腰まわりや脚の片側に負担が集まりやすい傾向があります。冷えで動きが減ると、片寄りが強く出やすくなります。", "続き(タイプCの詳しい解説)と、1日3分の自宅ケアガイドをLINEでお届けします。"], "D": ["タイプD:動ける分、偏りに気づきにくいタイプ", "よく動ける反面、使いやすい部分ばかり使い、苦手な動きが残りやすい傾向があります。", "続き(タイプDの詳しい解説)と、1日3分の自宅ケアガイドをLINEでお届けします。"]};
+var QS=[{"q": "朝起きた時点で、もう首や肩が重い", "o": [["あてはまる", "A"], ["あてはまらない", "N"]]}, {"q": "夕方にどっと疲れが出る、または夜なかなか寝つけない", "o": [["あてはまる", "B"], ["あてはまらない", "N"]]}, {"q": "座るとき、いつも同じ側に体重をかけている・脚を組んでいる", "o": [["あてはまる", "C"], ["あてはまらない", "N"]]}, {"q": "運動やストレッチをしているのに、いつも同じところが張る", "o": [["あてはまる", "D"], ["あてはまらない", "N"]]}];
+var RES={"N":["タイプ:寒暖差の影響を受けやすい予備軍","今は大きな不調のサインは少なめです。ただ、寒暖差が大きくなる10月中旬〜11月は、首肩のこりやだるさが出やすい時期です。","不調が出る前にできる、1日3分の自宅ケアガイドをLINEでお届けします。"],"A": ["タイプA:上半身に力が入りっぱなしタイプ", "首や肩の力が抜けにくく、休んでも重さが残りやすい傾向があります。寒暖差の季節は、さらに首をすくめて縮こまりがちです。", "続き(タイプAの詳しい解説)と、1日3分の自宅ケアガイドをLINEでお届けします。"], "B": ["タイプB:スイッチが切り替わりにくいタイプ", "活動と休息の切り替えがうまくいかず、夕方や夜に疲れが出やすい傾向があります。寒暖差で自律神経が働き続けると、さらに抜けにくくなります。", "続き(タイプBの詳しい解説)と、1日3分の自宅ケアガイドをLINEでお届けします。"], "C": ["タイプC:土台が片寄っているタイプ", "立ち方や座り方のくせで、腰まわりや脚の片側に負担が集まりやすい傾向があります。冷えで動きが減ると、片寄りが強く出やすくなります。", "続き(タイプCの詳しい解説)と、1日3分の自宅ケアガイドをLINEでお届けします。"], "D": ["タイプD:動ける分、偏りに気づきにくいタイプ", "よく動ける反面、使いやすい部分ばかり使い、苦手な動きが残りやすい傾向があります。", "続き(タイプDの詳しい解説)と、1日3分の自宅ケアガイドをLINEでお届けします。"]};
 var LINE="https://line.me/R/ti/p/@375cxqbr";var ans=[],i=0,started=false;
 function ev(n){try{if(window.fbq)fbq('trackCustom',n)}catch(e){}}
 function startQuiz(){var q=document.getElementById('quiz');q.hidden=false;document.getElementById('fx').hidden=true;if(!started){started=true;ev('QuizStart');render()}q.scrollIntoView({behavior:'smooth'})}
@@ -78,7 +78,7 @@ document.getElementById('start').onclick=startQuiz;
 function render(){var b=document.getElementById('qbox');document.getElementById('pg').style.width=(i/QS.length*100)+'%';
  if(i<QS.length){var q=QS[i];b.innerHTML='<div class="qn">QUESTION '+(i+1)+' / '+QS.length+'</div><div class="qt"></div><div class="opts"></div>';b.querySelector('.qt').textContent=q.q;
   q.o.forEach(function(o){var x=document.createElement('button');x.type='button';x.className='opt';x.textContent=o[0];x.onclick=function(){ans.push(o[1]);i++;render()};b.querySelector('.opts').appendChild(x)});return}
- ev('QuizComplete');var c={};ans.forEach(function(a){c[a]=(c[a]||0)+1});var best=ans[ans.length-1];Object.keys(c).forEach(function(k){if(c[k]>c[best])best=k});var r=RES[best];
+ ev('QuizComplete');var ys=ans.filter(function(a){return a!=='N'});var best=ys.length?ys[0]:'N';var r=RES[best];
  b.innerHTML='<div class="res"><div class="qn">あなたの結果</div><h3></h3><p class="p1"></p><p class="p2" style="color:var(--text)"></p><a class="btn js-line" href="'+LINE+'">結果の続きとケアガイドをLINEで受け取る</a><p class="note">LINEが開かない方は、LINEアプリでID検索してください:<b>@375cxqbr</b></p></div>';
  b.querySelector('h3').textContent=r[0];b.querySelector('.p1').textContent=r[1];b.querySelector('.p2').textContent=r[2];
  b.querySelector('.js-line').onclick=function(){try{if(window.fbq)fbq('track','Lead')}catch(e){}};}

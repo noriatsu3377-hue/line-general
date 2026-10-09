@@ -55,14 +55,14 @@ h2{font-size:20px;margin:44px 0 14px;border-left:3px solid var(--accent);padding
 <div class="eyebrow">朝晩の寒暖差で、からだが重い方へ</div>
 <h1>揉んでも、<br>すぐ戻る肩こり。</h1>
 <p class="lead">原因は、筋肉だけではありません。寒暖差で自律神経が疲れているのかもしれません。「あるある」と思うものを4つだけチェックして、あなたの疲れ方のタイプを見てみてください。</p>
-<div class="gift"><span class="lbl">無料プレゼント</span><h2>寒暖差リセット 自宅ケアガイド(PDF)</h2><ul><li>あなたの「疲れ方のタイプ」(A〜D)の詳しい解説</li><li>1日3分の自宅ケア3つ(呼吸・胸・足元)</li><li>LINE登録者限定:初回の方に「評価レポート(写真つき)」をプレゼント</li></ul></div>
+<div class="gift"><span class="lbl">無料プレゼント</span><h2>寒暖差リセット 自宅ケアガイド(PDF)</h2><ul><li>あなたの「疲れ方のタイプ」(A〜D)の詳しい解説</li><li>1日3分の自宅ケア3つ(呼吸・胸・足元)</li><li>もう1冊:「整体院ではなかなか教えてくれない 戻らない身体の1分習慣」(PDF・12の習慣)</li><li>LINE登録者限定:<b>初回30%OFF(10,000円→7,000円)</b>+「評価レポート(写真つき)」</li></ul></div>
 <button class="btn" id="start" type="button">あてはまるか、4つだけチェックする(無料)</button>
 <p class="note">所要1分・登録は無料。いつでもブロックできます。</p>
 <section id="quiz" hidden><div class="bar"><i id="pg"></i></div><div id="qbox"></div></section>
 <img class="hero" src="hero.jpg" alt="整体師・パーソナルトレーナーの原口慶篤">
 <h2>THEORYについて</h2>
 <div class="item"><b>評価してから、整える</b><p>東京・恵比寿周辺(完全予約制)。身体の状態を評価してから、整体・関節調整・ストレッチ・運動を組み合わせて内容を決めます。</p></div>
-<div class="item"><b>初回 TOTAL BODY CHECK</b><p>75〜90分/10,000円(税込)。LINE登録者限定で、初回の方に「評価レポート(写真つき)」をお渡しします。</p></div>
+<div class="item"><b>初回 TOTAL BODY CHECK</b><p>75〜90分/10,000円(税込)。<b>LINE登録者限定で初回30%OFF(7,000円)</b>。LINE登録から14日以内のご予約が対象です。初回の方には「評価レポート(写真つき)」もお渡しします。</p></div>
 <h2>原口 慶篤</h2>
 <p class="prof">パーソナルトレーナー兼整体師。トレーナー歴12年。<br>NASM-PES/NSCA-CPT/人体解剖実習5回修了/オステオパシー修了/赤十字救急法救急員</p>
 <p class="small">このチェックはセルフチェックの目安で、診断ではありません。当セッションは医療行為ではなく、診断・治療を目的としたものではありません。痛みやしびれが強い場合は、先に医療機関へご相談ください。</p>
@@ -78,5 +78,5 @@ document.getElementById('start').onclick=startQuiz;
 function render(){var b=document.getElementById('qbox');document.getElementById('pg').style.width=(i/QS.length*100)+'%';
  if(i<QS.length){var q=QS[i];b.innerHTML='<div class="qn">QUESTION '+(i+1)+' / '+QS.length+'</div><div class="qt"></div><div class="opts"></div>';b.querySelector('.qt').textContent=q.q;
   q.o.forEach(function(o){var x=document.createElement('button');x.type='button';x.className='opt';x.textContent=o[0];x.onclick=function(){ans.push(o[1]);i++;render()};b.querySelector('.opts').appendChild(x)});return}
- ev('QuizComplete');var g=[];QS.forEach(function(q,k){if(ans[k]==='Y')g.push(q.g)});var hit=g.length;b.innerHTML='<div class="res"><div class="qn">チェックの結果</div><h3></h3><p class="p1"></p><div class="gift" style="margin:12px 0"><span class="lbl">あなたに届く特典</span><ul class="gl"></ul></div><a class="btn js-line" href="'+LINE+'">この特典をLINEで受け取る(無料)</a><p class="note">LINEが開かない方は、LINEアプリでID検索してください:<b>@375cxqbr</b></p></div>';b.querySelector('h3').textContent=hit?('あてはまったのは '+hit+' つでした'):"今は大きな不調のサインは少なめです";b.querySelector('.p1').textContent=hit?"あてはまった項目に合わせたケアを、ガイドにまとめてお届けします。揉んでも戻る原因は、筋肉だけではなく、寒暖差で自律神経が疲れていることかもしれません。":"寒暖差が大きくなる10月中旬〜11月は、首肩のこりやだるさが出やすい時期です。不調が出る前のケアをお届けします。";var ul=b.querySelector('.gl');g.concat(["寒暖差リセット 自宅ケアガイド(PDF)", "LINE登録者限定:初回の方に「評価レポート(写真つき)」"]).forEach(function(x){var li=document.createElement('li');li.textContent=x;ul.appendChild(li)});b.querySelector('.js-line').onclick=function(){try{if(window.fbq)fbq('track','Lead')}catch(e){}};}
+ ev('QuizComplete');var g=[];QS.forEach(function(q,k){if(ans[k]==='Y')g.push(q.g)});var hit=g.length;b.innerHTML='<div class="res"><div class="qn">チェックの結果</div><h3></h3><p class="p1"></p><div class="gift" style="margin:12px 0"><span class="lbl">あなたに届く特典</span><ul class="gl"></ul></div><a class="btn js-line" href="'+LINE+'">この特典をLINEで受け取る(無料)</a><p class="note">LINEが開かない方は、LINEアプリでID検索してください:<b>@375cxqbr</b></p></div>';b.querySelector('h3').textContent=hit?('あてはまったのは '+hit+' つでした'):"今は大きな不調のサインは少なめです";b.querySelector('.p1').textContent=hit?"あてはまった項目に合わせたケアを、ガイドにまとめてお届けします。揉んでも戻る原因は、筋肉だけではなく、寒暖差で自律神経が疲れていることかもしれません。":"寒暖差が大きくなる10月中旬〜11月は、首肩のこりやだるさが出やすい時期です。不調が出る前のケアをお届けします。";var ul=b.querySelector('.gl');g.concat(["寒暖差リセット 自宅ケアガイド(PDF・9ページ)", "戻らない身体の1分習慣(PDF・12ページ)", "LINE登録者限定:初回30%OFF(10,000円→7,000円)+評価レポート(写真つき)"]).forEach(function(x){var li=document.createElement('li');li.textContent=x;ul.appendChild(li)});b.querySelector('.js-line').onclick=function(){try{if(window.fbq)fbq('track','Lead')}catch(e){}};}
 </script></body></html>
